@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/cdk/a11y';
+@import '~@angular/cdk/overlay';
+
+@include cdk-a11y();
+@include cdk-overlay();
