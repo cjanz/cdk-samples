@@ -4,3 +4,16 @@
 
 @include cdk-a11y();
 @include cdk-overlay();
+
+@import 'variables';
+
+html, body {
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:Roboto,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+    font-size: 16px;
+}

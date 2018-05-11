@@ -1,0 +1,42 @@
+@import '~src/_variables.scss';
+
+header {
+    color: white;
+    background-color: $header-background-color;
+
+    nav {
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        a {
+            color: $header-link-color;
+            text-decoration: none;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            
+            span {
+                margin-left: 0.25rem;
+            }
+
+            &:active {
+                background-color: $header-link-background-color;                
+            }
+
+            &:hover {
+                background-color: $header-link-background-color;
+            }
+        }
+
+    }
+}
+
+main {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
