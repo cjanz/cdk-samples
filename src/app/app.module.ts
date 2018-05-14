@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PlatformModule } from '@angular/cdk/platform';
 import { LayoutModule } from '@angular/cdk/layout';
 import { CdkTreeModule } from '@angular/cdk/tree';
+import { CdkTableModule } from '@angular/cdk/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -29,7 +30,8 @@ import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
     AppRoutingModule,
     PlatformModule,
     LayoutModule,
-    CdkTreeModule
+    CdkTreeModule,
+    CdkTableModule
   ],
   providers: [],
   entryComponents: [
