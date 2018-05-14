@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver } from '@angular/cdk/layout';
+
+import { map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-layout-sample',
@@ -7,9 +11,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LayoutSampleComponent implements OnInit {
 
-  constructor() { }
+  public portrait$: Observable<boolean>;
+
+  constructor(private breakpointObserver: BreakpointObserver) { }
 
   ngOnInit() {
+    this.portrait$ = this.breakpointObserver.observe('(orientation: portrait)')
+      .pipe(
+        map(result => result.matches)
+      );
   }
 
 }
