@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { PlatformModule } from '@angular/cdk/platform';
 import { LayoutModule } from '@angular/cdk/layout';
+import { CdkTreeModule } from '@angular/cdk/tree';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +28,8 @@ import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
     BrowserModule,
     AppRoutingModule,
     PlatformModule,
-    LayoutModule
+    LayoutModule,
+    CdkTreeModule
   ],
   providers: [],
   entryComponents: [

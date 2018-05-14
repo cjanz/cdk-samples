@@ -1,3 +1,16 @@
-<p>
-  tree-sample works!
-</p>
+<cdk-tree [dataSource]="dataSource" [treeControl]="treeControl">
+
+  <cdk-nested-tree-node *cdkTreeNodeDef="let node; when: hasChildren" class="example-tree-node">
+    <button type="button" cdkTreeNodeToggle>
+      <i class="material-icons">{{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right' }}</i>
+    </button>
+    {{node.name}}
+    <div [class.example-tree-invisible]="!treeControl.isExpanded(node)">
+      <ng-container cdkTreeNodeOutlet></ng-container>
+    </div>
+  </cdk-nested-tree-node>
+
+  <cdk-nested-tree-node *cdkTreeNodeDef="let node" class="example-tree-node">
+    <pre>{{node.name}}</pre>
+  </cdk-nested-tree-node>
+</cdk-tree>
