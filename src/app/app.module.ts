@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { PlatformModule } from '@angular/cdk/platform';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlatformSampleComponent } from './platform-sample/platform-sample.component';
@@ -22,7 +24,8 @@ import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    PlatformModule
   ],
   providers: [],
   entryComponents: [

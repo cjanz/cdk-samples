@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Platform, getSupportedInputTypes } from '@angular/cdk/platform';
 
 @Component({
   selector: 'app-platform-sample',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlatformSampleComponent implements OnInit {
 
-  constructor() { }
+  constructor(public platform: Platform) { }
 
   ngOnInit() {
+
+  }
+
+  public get hasDateInput() {
+    return getSupportedInputTypes().has('date');
   }
 
 }
