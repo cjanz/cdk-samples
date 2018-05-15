@@ -1,3 +1,32 @@
-<p>
-  overlay-sample works!
-</p>
+<input type="text" [value]="address" readonly placeholder="Adresse" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+<button type="button" (click)="isOpen = !isOpen">
+  <i class="material-icons">expand_more</i>
+</button>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="trigger"
+  [cdkConnectedOverlayOpen]="isOpen"
+  (backdropClick)="close()"
+  (detach)="close()"
+  [cdkConnectedOverlayHasBackdrop]="true"
+  cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop">
+
+  <div class="overlay" role="dialog" aria-label="Address Form">
+    <form cdkTrapFocusAutoCapture cdkTrapFocus (submit)="close()" [formGroup]="addressForm">
+      <h1 class="title">Adresse</h1>
+      <label for="">Straße</label>
+      <input type="text" formControlName="street">
+      <label for="">Hausnummer</label>
+      <input type="text" formControlName="number">
+      <button>OK</button>
+    </form>
+  </div>
+
+</ng-template>
+
+
+<div class="dummy" style="margin-top: 100px;">
+  <input type="text" name="" id="">
+  <input type="text" name="" id="">
+</div>
