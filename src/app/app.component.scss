@@ -1,5 +1,11 @@
 @import '../variables';
 
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 header {
     color: white;
     background-color: $header-background-color;
@@ -40,4 +46,5 @@ main {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex: 1;
 }

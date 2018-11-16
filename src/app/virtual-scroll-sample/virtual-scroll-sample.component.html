@@ -1,0 +1,17 @@
+<h1>Virtual Scrolling Sample</h1>
+
+<main>
+  <cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
+    <div *cdkVirtualFor="let item of items; let odd = odd"
+         [class.alternate]="odd"
+         class="example-item">
+      {{item}}
+    </div>
+  </cdk-virtual-scroll-viewport>
+
+  <pre class="html-output">
+    <code>
+      {{viewPortHtml}}
+    </code>
+  </pre>
+</main>

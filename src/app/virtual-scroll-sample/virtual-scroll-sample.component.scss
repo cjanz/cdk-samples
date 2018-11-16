@@ -1,0 +1,37 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  .example-viewport {
+    height: 100%;
+    width: 400px;
+    border: 1px solid black;
+  }
+
+  .example-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+
+    &.alternate {
+      background: lightgray;
+    }
+  }
+
+  .html-output {
+    flex: 1;
+    max-width: 600px;
+    margin-left: 2rem;
+    border: 1px solid black;
+    font-size: 12px;
+  }
+}
+
+

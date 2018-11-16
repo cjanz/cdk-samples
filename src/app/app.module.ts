@@ -20,6 +20,8 @@ import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
 import { DndSampleComponent } from './dnd-sample/dnd-sample.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { VirtualScrollSampleComponent } from './virtual-scroll-sample/virtual-scroll-sample.component';
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TreeSampleComponent,
     OverlaySampleComponent,
     LayoutSampleComponent,
-    DndSampleComponent
+    DndSampleComponent,
+    VirtualScrollSampleComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +46,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     CdkTableModule,
     A11yModule,
     ReactiveFormsModule,
-    DragDropModule
+    DragDropModule,
+    ScrollingModule
   ],
   providers: [],
   entryComponents: [
@@ -53,7 +57,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TreeSampleComponent,
     TableSampleComponent,
     OverlaySampleComponent,
-    DndSampleComponent
+    DndSampleComponent,
+    VirtualScrollSampleComponent
   ],
   bootstrap: [AppComponent]
 })
