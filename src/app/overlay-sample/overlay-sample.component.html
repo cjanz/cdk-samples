@@ -1,4 +1,6 @@
-<input type="text" [value]="address" readonly placeholder="Adresse" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+<h1>Overlay/Popup Sample</h1>
+
+<input type="text" [value]="address" readonly placeholder="Address" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
 <button type="button" (click)="isOpen = !isOpen">
   <i class="material-icons">expand_more</i>
 </button>
@@ -14,11 +16,11 @@
 
   <div class="overlay" role="dialog" aria-label="Address Form">
     <form cdkTrapFocusAutoCapture cdkTrapFocus (submit)="close()" [formGroup]="addressForm">
-      <h1 class="title">Adresse</h1>
-      <label for="">Straße</label>
-      <input type="text" formControlName="street">
-      <label for="">Hausnummer</label>
-      <input type="text" formControlName="number">
+      <h1 class="title">Address</h1>
+      <label for="street">Street</label>
+      <input type="text" id="street" formControlName="street">
+      <label for="number">Number</label>
+      <input type="text" id="number" formControlName="number">
       <button>OK</button>
     </form>
   </div>
@@ -27,6 +29,6 @@
 
 
 <div class="dummy" style="margin-top: 100px;">
-  <input type="text" name="" id="">
-  <input type="text" name="" id="">
+  <input type="text" name="" >
+  <input type="text" name="">
 </div>

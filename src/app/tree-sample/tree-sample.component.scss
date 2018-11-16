@@ -1,13 +1,30 @@
-:host {
-    display: flex;
-    width: 50%;
-}
 
 .example-tree-node {
     display: block;
-    padding-left: 40px;
+    padding-left: 20px;
+
+  &.leaf {
+    padding-left: 45px;
+  }
 }
 
 .example-tree-invisible{
     display: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+
+  i {
+    vertical-align: middle;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+span {
+  vertical-align: middle;
 }

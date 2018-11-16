@@ -9,15 +9,22 @@ interface ITreeNode {
 }
 
 const sample: ITreeNode = {
-  name: 'Root',
+  name: 'Germany',
   children: [
     {
-      name: 'child 1',
-      children: [{
-        name: 'child 1.1'
-      }]
+      name: 'Baden-Württemberg',
+      children: [
+        {name: 'Karlsruhe'},
+        {name: 'Stuttgart'},
+        {name: 'Freiburg'},
+      ]
     },
-    { name: 'child 2' },
+    {
+      name: 'Bayern',
+      children: [
+        {name: 'München'}
+      ]
+    },
   ]
 };
 
@@ -32,7 +39,8 @@ export class TreeSampleComponent implements OnInit {
 
   public treeControl = new NestedTreeControl<ITreeNode>(node => of(node.children));
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }

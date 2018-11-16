@@ -1,7 +1,7 @@
-<p>
-  layout-sample works!
-</p>
-
+<h1>Current orientation</h1>
 <div *ngIf="portrait$ | async">
-  Porträt
+  Portrait ↕️
+</div>
+<div *ngIf="(portrait$ | async) == false">
+  Landscape ↔️
 </div>

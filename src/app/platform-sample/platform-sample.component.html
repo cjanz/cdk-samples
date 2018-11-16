@@ -1,7 +1,39 @@
-<ul>
-  <li>is browser: {{platform.isBrowser}}</li>
-  <li>is iOS: {{platform.IOS}}</li>
-  <li>is WebKit: {{platform.WEBKIT}}</li>
-  <li>is Blink: {{platform.BLINK}}</li>
-  <li>has date input: {{hasDateInput}}</li>
-</ul>
+<h1>Platform properties</h1>
+<table>
+  <thead>
+  <tr>
+    <th>
+      Property
+    </th>
+    <th>
+      ✅ / ❌
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td>Browser</td>
+    <td>{{platform.isBrowser ? '✅' : '❌'}}</td>
+  </tr>
+  <tr>
+    <td>iOS</td>
+    <td>{{platform.IOS ? '✅' : '❌'}}</td>
+  </tr>
+  <tr>
+    <td>Android</td>
+    <td>{{platform.ANDROID ? '✅' : '❌'}}</td>
+  </tr>
+  <tr>
+    <td>WebKit</td>
+    <td>{{platform.WEBKIT ? '✅' : '❌'}}</td>
+  </tr>
+  <tr>
+    <td>Blink</td>
+    <td>{{platform.BLINK ? '✅' : '❌'}}</td>
+  </tr>
+  <tr>
+    <td>Has &lt;input type="date"&gt;</td>
+    <td>{{hasDateInput ? '✅' : '❌'}}</td>
+  </tr>
+  </tbody>
+</table>
