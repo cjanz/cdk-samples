@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TreeSampleComponent } from './tree-sample.component';
+import { CdkTreeModule } from '@angular/cdk/tree';
 
 describe('TreeSampleComponent', () => {
   let component: TreeSampleComponent;
@@ -8,6 +9,7 @@ describe('TreeSampleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [CdkTreeModule],
       declarations: [ TreeSampleComponent ]
     })
     .compileComponents();
