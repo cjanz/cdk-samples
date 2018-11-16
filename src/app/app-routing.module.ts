@@ -6,6 +6,7 @@ import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
 import { TreeSampleComponent } from './tree-sample/tree-sample.component';
 import { TableSampleComponent } from './table-sample/table-sample.component';
 import { OverlaySampleComponent } from './overlay-sample/overlay-sample.component';
+import { DndSampleComponent } from './dnd-sample/dnd-sample.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -15,6 +16,7 @@ const routes: Routes = [
   { path: 'tree', component: TreeSampleComponent },
   { path: 'table', component: TableSampleComponent },
   { path: 'overlay', component: OverlaySampleComponent },
+  { path: 'dnd', component: DndSampleComponent }
 ];
 
 @NgModule({

@@ -17,6 +17,9 @@ import { TableSampleComponent } from './table-sample/table-sample.component';
 import { TreeSampleComponent } from './tree-sample/tree-sample.component';
 import { OverlaySampleComponent } from './overlay-sample/overlay-sample.component';
 import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
+import { DndSampleComponent } from './dnd-sample/dnd-sample.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -26,10 +29,12 @@ import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
     TableSampleComponent,
     TreeSampleComponent,
     OverlaySampleComponent,
-    LayoutSampleComponent
+    LayoutSampleComponent,
+    DndSampleComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     PlatformModule,
     LayoutModule,
@@ -37,7 +42,8 @@ import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
     CdkTreeModule,
     CdkTableModule,
     A11yModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    DragDropModule
   ],
   providers: [],
   entryComponents: [
@@ -46,7 +52,8 @@ import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
     LayoutSampleComponent,
     TreeSampleComponent,
     TableSampleComponent,
-    OverlaySampleComponent
+    OverlaySampleComponent,
+    DndSampleComponent
   ],
   bootstrap: [AppComponent]
 })
