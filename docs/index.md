@@ -14,3 +14,7 @@ It shows the following features:
 * Overlays
 * Drag and Drop
 * Virtual Scrolling
+
+# Slides
+
+The slides for the corresponding sessions of these samples can be found here: [Slides](./slides_angular_cdk.pdf).
