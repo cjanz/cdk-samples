@@ -21,5 +21,5 @@ Run `npm start` for a dev server. Navigate to `http://localhost:4200/`.
 
 ### On Stackblitz
 
-Just open the project in [StackBlitz](https://stackblitz.com/github/bridgingIT/cdk-samples) and play with it :-)
+Just open the project in [StackBlitz](https://stackblitz.com/github/cjanz/cdk-samples) and play with it :-)
 
