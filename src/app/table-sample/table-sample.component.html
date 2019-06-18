@@ -1,22 +1,24 @@
-<table cdk-table [dataSource]="dataSource" class="example-table">
-  <!--- Note that these columns can be defined in any order.
+<div class="table-container">
+  <table cdk-table [dataSource]="dataSource" class="example-table">
+    <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
-  <!-- ID Column -->
-  <ng-container cdkColumnDef="userId">
-    <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> ID </th>
-    <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.id}} </td>
-  </ng-container>
+    <!-- ID Column -->
+    <ng-container cdkColumnDef="userId">
+      <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> ID </th>
+      <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.id}} </td>
+    </ng-container>
 
-  <!-- Progress Column -->
-  <ng-container cdkColumnDef="progress">
-    <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Progress </th>
-    <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.progress}}% </td>
-  </ng-container>
+    <!-- Progress Column -->
+    <ng-container cdkColumnDef="progress">
+      <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Progress </th>
+      <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.progress}}% </td>
+    </ng-container>
 
-  <tr cdk-header-row *cdkHeaderRowDef="visibleColumns" class="example-header-row"></tr>
-  <tr cdk-row *cdkRowDef="let row; columns: visibleColumns" class="example-row"></tr>
-</table>
+    <tr cdk-header-row *cdkHeaderRowDef="visibleColumns; sticky: true" class="example-header-row"></tr>
+    <tr cdk-row *cdkRowDef="let row; columns: visibleColumns" class="example-row"></tr>
+  </table>
+</div>
 
 <div class="actions">
   <h2>Actions</h2>

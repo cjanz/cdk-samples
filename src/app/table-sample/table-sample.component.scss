@@ -3,12 +3,27 @@
   flex-direction: row;
 
   height: 100%;
+  width: 75%;
 }
 
-table {
+.table-container {
   display: block;
   height: 100%;
+  width: 50%;
   overflow: auto;
+
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+
+    th, td {
+      border: 0;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-color: black;
+    }
+  }
 }
 
 .actions {
