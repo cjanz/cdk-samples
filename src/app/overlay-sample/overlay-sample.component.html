@@ -1,7 +1,8 @@
 <h1>Adress Picker Sample</h1>
 
-<form [formGroup]="form">
-  <input type="text" formControlName="address" readonly placeholder="Address" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+<form class="main" [formGroup]="form">
+  <label for="address">Address</label>
+  <input type="text" id="address" formControlName="address" readonly placeholder="Address" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
   <button type="button" (click)="isOpen = !isOpen">
     <i class="material-icons">expand_more</i>
   </button>
