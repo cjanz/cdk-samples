@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { PlatformModule } from '@angular/cdk/platform';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -38,6 +39,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AppRoutingModule,
     PlatformModule,
     LayoutModule,

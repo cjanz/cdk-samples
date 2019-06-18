@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
-interface IRow {
-  id: number;
-  progress: number;
-}
+import { UserService, User } from './user-service';
+import { Observable } from 'rxjs';
+import { shareReplay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-table-sample',
@@ -12,17 +10,16 @@ interface IRow {
 })
 export class TableSampleComponent implements OnInit {
 
-  public dataSource: IRow[] = [];
+  public users$: Observable<User[]>;
 
-  public visibleColumns = ['userId', 'progress'];
+  public visibleColumns: (keyof User)[] = ['id', 'username', 'name', 'email', 'phone', 'website'];
 
-  constructor() {
-    for (let i = 0; i < 100; i++) {
-      this.dataSource.push({ id: i, progress: Math.random() * 100 });
-    }
+  constructor(private userService: UserService) {
   }
 
   ngOnInit() {
+    this.users$ = this.userService.loadUsers()
+      .pipe(shareReplay(1));
   }
 
   public reverseColumns() {

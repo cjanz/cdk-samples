@@ -1,18 +1,36 @@
 <div class="table-container">
-  <table cdk-table [dataSource]="dataSource" class="example-table">
+  <table cdk-table [dataSource]="users$ | async" class="example-table">
     <!--- Note that these columns can be defined in any order.
           The actual rendered columns are set as a property on the row definition" -->
 
-    <!-- ID Column -->
-    <ng-container cdkColumnDef="userId">
+    <ng-container cdkColumnDef="id" sticky>
       <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> ID </th>
       <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.id}} </td>
     </ng-container>
 
-    <!-- Progress Column -->
-    <ng-container cdkColumnDef="progress">
-      <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Progress </th>
-      <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.progress}}% </td>
+    <ng-container cdkColumnDef="username">
+      <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Username </th>
+      <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.username}} </td>
+    </ng-container>
+
+    <ng-container cdkColumnDef="name">
+      <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Name </th>
+      <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.name}} </td>
+    </ng-container>
+
+    <ng-container cdkColumnDef="email">
+      <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> E-Mail </th>
+      <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.email}} </td>
+    </ng-container>
+
+    <ng-container cdkColumnDef="phone">
+      <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Phone </th>
+      <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.phone}} </td>
+    </ng-container>
+
+    <ng-container cdkColumnDef="website">
+      <th cdk-header-cell *cdkHeaderCellDef class="example-header-cell"> Website </th>
+      <td cdk-cell *cdkCellDef="let row" class="example-cell"> {{row.website}} </td>
     </ng-container>
 
     <tr cdk-header-row *cdkHeaderRowDef="visibleColumns; sticky: true" class="example-header-row"></tr>

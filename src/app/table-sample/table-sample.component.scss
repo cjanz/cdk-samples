@@ -3,13 +3,13 @@
   flex-direction: row;
 
   height: 100%;
-  width: 75%;
+  width: 100%;
 }
 
 .table-container {
   display: block;
   height: 100%;
-  width: 50%;
+  width: 60%;
   overflow: auto;
 
   table {
@@ -20,8 +20,16 @@
     th, td {
       border: 0;
       border-bottom-width: 1px;
-      border-bottom-style: solid;
+      border-style: solid;
       border-color: black;
+
+      &.cdk-table-sticky:first-of-type {
+        border-right-width: 1px;
+      }
+    }
+
+    td {
+      background-color: white;
     }
   }
 }
