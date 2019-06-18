@@ -9,7 +9,7 @@ import { interval, Subscription } from 'rxjs';
 })
 export class VirtualScrollSampleComponent implements AfterViewInit, OnDestroy {
 
-  @ViewChild(CdkVirtualScrollViewport) scrollViewPortElement: CdkVirtualScrollViewport;
+  @ViewChild(CdkVirtualScrollViewport, { static: true }) scrollViewPortElement: CdkVirtualScrollViewport;
 
   viewPortHtml = '';
 
