@@ -1,7 +1,9 @@
 <h1>Current orientation</h1>
-<div *ngIf="portrait$ | async">
-  Portrait ↕️
+<div class="portrait" *ngIf="portrait$ | async">
+  <span>📱</span>
+  <label>Portrait</label>
 </div>
-<div *ngIf="(portrait$ | async) == false">
-  Landscape ↔️
+<div class="landscape" *ngIf="(portrait$ | async) == false">
+  <span>📱</span>
+  <label>Landscape</label>
 </div>

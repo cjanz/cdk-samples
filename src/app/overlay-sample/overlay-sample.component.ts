@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
@@ -6,15 +6,19 @@ import { FormGroup, FormBuilder } from '@angular/forms';
   templateUrl: './overlay-sample.component.html',
   styleUrls: ['./overlay-sample.component.scss']
 })
-export class OverlaySampleComponent implements OnInit {
+export class OverlaySampleComponent {
 
   public isOpen = false;
 
-  public address = '';
+  public form: FormGroup;
 
   public addressForm: FormGroup;
 
   constructor(fb: FormBuilder) {
+    this.form = fb.group({
+      address: ''
+    });
+
     this.addressForm = fb.group({
       street: '',
       number: ''
@@ -23,10 +27,9 @@ export class OverlaySampleComponent implements OnInit {
 
   public close() {
     this.isOpen = false;
-    this.address = this.addressForm.value['street'] + ' ' + this.addressForm.value['number'];
-  }
 
-  ngOnInit() {
+    const addressData = this.addressForm.value;
+    this.form.patchValue({ address: addressData.street + ' ' + addressData.number });
   }
 
 }

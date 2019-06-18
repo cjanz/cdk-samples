@@ -1,5 +1,16 @@
+:host {
+  display: flex;
+  flex-direction: row;
+
+  height: 100%;
+}
+
 table {
   display: block;
-  height: 80%;
+  height: 100%;
   overflow: auto;
+}
+
+.actions {
+  margin-left: 2rem;
 }

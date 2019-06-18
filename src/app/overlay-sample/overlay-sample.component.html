@@ -1,34 +1,37 @@
-<h1>Overlay/Popup Sample</h1>
+<h1>Adress Picker Sample</h1>
 
-<input type="text" [value]="address" readonly placeholder="Address" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
-<button type="button" (click)="isOpen = !isOpen">
-  <i class="material-icons">expand_more</i>
-</button>
+<form [formGroup]="form">
+  <input type="text" formControlName="address" readonly placeholder="Address" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  <button type="button" (click)="isOpen = !isOpen">
+    <i class="material-icons">expand_more</i>
+  </button>
 
-<ng-template
-  cdkConnectedOverlay
-  [cdkConnectedOverlayOrigin]="trigger"
-  [cdkConnectedOverlayOpen]="isOpen"
-  (backdropClick)="close()"
-  (detach)="close()"
-  [cdkConnectedOverlayHasBackdrop]="true"
-  cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop">
+  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen"
+    (backdropClick)="close()" (detach)="close()" [cdkConnectedOverlayHasBackdrop]="true"
+    cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop">
 
-  <div class="overlay" role="dialog" aria-label="Address Form">
-    <form cdkTrapFocusAutoCapture cdkTrapFocus (submit)="close()" [formGroup]="addressForm">
-      <h1 class="title">Address</h1>
-      <label for="street">Street</label>
-      <input type="text" id="street" formControlName="street">
-      <label for="number">Number</label>
-      <input type="text" id="number" formControlName="number">
-      <button>OK</button>
-    </form>
+    <div class="overlay" role="dialog" aria-label="Address Form">
+      <form cdkTrapFocusAutoCapture cdkTrapFocus (submit)="close()" [formGroup]="addressForm">
+        <h1 class="title">Address</h1>
+        <label for="street">Street</label>
+        <input type="text" id="street" formControlName="street">
+        <label for="number">Number</label>
+        <input type="text" id="number" formControlName="number">
+        <button>OK</button>
+      </form>
+    </div>
+
+  </ng-template>
+
+
+  <div class="dummy">
+    <div>
+      <label for="lorem">Lorem</label>
+      <input type="text" id="lorem" name="" placeholder="Lorem">
+    </div>
+    <div>
+      <label for="ipsum">Ipsum</label>
+      <input type="text" name="" placeholder="Ipsum">
+    </div>
   </div>
-
-</ng-template>
-
-
-<div class="dummy" style="margin-top: 100px;">
-  <input type="text" name="" >
-  <input type="text" name="">
-</div>
+</form>

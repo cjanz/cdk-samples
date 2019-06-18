@@ -21,15 +21,16 @@ header {
             color: $header-link-color;
             text-decoration: none;
             padding: 0.5rem;
+            margin-left: 1rem;
             display: flex;
             align-items: center;
-            
+
             span {
                 margin-left: 0.25rem;
             }
 
-            &:active {
-                background-color: $header-link-background-color;                
+            &:active, &.active {
+                background-color: $header-link-background-color;
             }
 
             &:hover {

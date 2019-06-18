@@ -1,4 +1,11 @@
 
+:host {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .example-tree-node {
     display: block;
     padding-left: 20px;
