@@ -1,23 +1,43 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PlatformSampleComponent } from './platform-sample/platform-sample.component';
-import { HomeComponent } from './home/home.component';
-import { LayoutSampleComponent } from './layout-sample/layout-sample.component';
-import { TreeSampleComponent } from './tree-sample/tree-sample.component';
-import { TableSampleComponent } from './table-sample/table-sample.component';
-import { OverlaySampleComponent } from './overlay-sample/overlay-sample.component';
-import { DndSampleComponent } from './dnd-sample/dnd-sample.component';
-import { VirtualScrollSampleComponent } from './virtual-scroll-sample/virtual-scroll-sample.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'platform', component: PlatformSampleComponent, data: { label: 'Platform', icon: 'computer' } },
-  { path: 'layout', component: LayoutSampleComponent, data: { label: 'Layout', icon: 'clear_all' } },
-  { path: 'tree', component: TreeSampleComponent, data: { label: 'Tree', icon: 'expand_more' } },
-  { path: 'table', component: TableSampleComponent, data: { label: 'Table', icon: 'table_chart' } },
-  { path: 'overlay', component: OverlaySampleComponent, data: { label: 'Overlay', icon: 'layers' } },
-  { path: 'dnd', component: DndSampleComponent, data: { label: 'Drag&Drop', icon: 'mouse' } },
-  { path: 'virtualscroll', component: VirtualScrollSampleComponent, data: { label: 'Virtual Scrolling', icon: 'unfold_more' } }
+  {
+    path: 'platform',
+    data: { label: 'Platform', icon: 'computer' },
+    loadChildren: () => import('./platform-sample/platform-sample.module').then(m => m.PlatformSampleModule)
+  },
+  {
+    path: 'layout',
+    data: { label: 'Layout', icon: 'clear_all' },
+    loadChildren: () => import('./layout-sample/layout-sample.module').then(m => m.LayoutSampleModule)
+  },
+  {
+    path: 'tree',
+    data: { label: 'Tree', icon: 'expand_more' },
+    loadChildren: () => import('./tree-sample/tree-sample.module').then(m => m.TreeSampleModule)
+  },
+  {
+    path: 'table',
+    data: { label: 'Table', icon: 'table_chart' },
+    loadChildren: () => import('./table-sample/table-sample.module').then(m => m.TableSampleModule)
+  },
+  {
+    path: 'overlay',
+    data: { label: 'Overlay', icon: 'layers' },
+    loadChildren: () => import('./overlay-sample/overlay-sample.module').then(m => m.OverlaySampleModule)
+  },
+  {
+    path: 'dnd',
+    data: { label: 'Drag&Drop', icon: 'mouse' },
+    loadChildren: () => import('./dnd-sample/dnd-sample.module').then(m => m.DndSampleModule)
+  },
+  {
+    path: 'virtualscroll',
+    data: { label: 'Virtual Scrolling', icon: 'unfold_more' },
+    loadChildren: () => import('./virtual-scroll-sample/virtual-scroll-sample.module').then(m => m.VirtualScrollSampleModule)
+  }
 ];
 
 @NgModule({
