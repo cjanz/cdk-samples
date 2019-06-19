@@ -11,7 +11,6 @@ import { VirtualScrollSampleComponent } from './virtual-scroll-sample/virtual-sc
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
-  { path: 'home', component: HomeComponent },
   { path: 'platform', component: PlatformSampleComponent, data: { label: 'Platform', icon: 'computer' } },
   { path: 'layout', component: LayoutSampleComponent, data: { label: 'Layout', icon: 'clear_all' } },
   { path: 'tree', component: TreeSampleComponent, data: { label: 'Tree', icon: 'expand_more' } },

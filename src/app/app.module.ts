@@ -13,7 +13,6 @@ import { A11yModule } from '@angular/cdk/a11y';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PlatformSampleComponent } from './platform-sample/platform-sample.component';
-import { HomeComponent } from './home/home.component';
 import { TableSampleComponent } from './table-sample/table-sample.component';
 import { TreeSampleComponent } from './tree-sample/tree-sample.component';
 import { OverlaySampleComponent } from './overlay-sample/overlay-sample.component';
@@ -23,12 +22,12 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { VirtualScrollSampleComponent } from './virtual-scroll-sample/virtual-scroll-sample.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     PlatformSampleComponent,
-    HomeComponent,
     TableSampleComponent,
     TreeSampleComponent,
     OverlaySampleComponent,
@@ -41,6 +40,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    HomeModule,
     PlatformModule,
     LayoutModule,
     OverlayModule,
@@ -53,7 +53,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   ],
   providers: [],
   entryComponents: [
-    HomeComponent,
     PlatformSampleComponent,
     LayoutSampleComponent,
     TreeSampleComponent,
