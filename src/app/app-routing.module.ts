@@ -9,16 +9,16 @@ import { OverlaySampleComponent } from './overlay-sample/overlay-sample.componen
 import { DndSampleComponent } from './dnd-sample/dnd-sample.component';
 import { VirtualScrollSampleComponent } from './virtual-scroll-sample/virtual-scroll-sample.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
   { path: 'home', component: HomeComponent },
-  { path: 'platform', component: PlatformSampleComponent },
-  { path: 'layout', component: LayoutSampleComponent },
-  { path: 'tree', component: TreeSampleComponent },
-  { path: 'table', component: TableSampleComponent },
-  { path: 'overlay', component: OverlaySampleComponent },
-  { path: 'dnd', component: DndSampleComponent },
-  { path: 'virtualscroll', component: VirtualScrollSampleComponent}
+  { path: 'platform', component: PlatformSampleComponent, data: { label: 'Platform', icon: 'computer' } },
+  { path: 'layout', component: LayoutSampleComponent, data: { label: 'Layout', icon: 'clear_all' } },
+  { path: 'tree', component: TreeSampleComponent, data: { label: 'Tree', icon: 'expand_more' } },
+  { path: 'table', component: TableSampleComponent, data: { label: 'Table', icon: 'table_chart' } },
+  { path: 'overlay', component: OverlaySampleComponent, data: { label: 'Overlay', icon: 'layers' } },
+  { path: 'dnd', component: DndSampleComponent, data: { label: 'Drag&Drop', icon: 'mouse' } },
+  { path: 'virtualscroll', component: VirtualScrollSampleComponent, data: { label: 'Virtual Scrolling', icon: 'unfold_more' } }
 ];
 
 @NgModule({

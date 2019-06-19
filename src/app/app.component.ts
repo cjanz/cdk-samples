@@ -1,4 +1,11 @@
 import { Component } from '@angular/core';
+import { routes } from './app-routing.module';
+
+interface NavigationItem {
+  label: string;
+  icon: string;
+  path: string;
+}
 
 @Component({
   selector: 'app-root',
@@ -6,5 +13,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'app';
+
+  navigationItems: NavigationItem[] = routes
+    .filter(route => route.data && route.data.label)
+    .map(route => ({
+      label: route.data.label,
+      icon: route.data.icon,
+      path: '/' + route.path
+    }));
+
 }
