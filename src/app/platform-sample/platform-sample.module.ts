@@ -10,8 +10,7 @@ import { PlatformModule } from '@angular/cdk/platform';
   entryComponents: [PlatformSampleComponent],
   imports: [
     CommonModule,
-    PlatformSampleRoutingModule,
-    PlatformModule
+    PlatformSampleRoutingModule
   ]
 })
 export class PlatformSampleModule { }

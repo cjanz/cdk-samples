@@ -14,7 +14,7 @@ export class VirtualScrollSampleComponent implements AfterViewInit, OnDestroy {
   viewPortHtml = '';
 
   items = Array
-    .from({length: 100000})
+    .from({ length: 100000 })
     .map((_, i) => `Item #${i}`);
 
   private subscription = new Subscription();
@@ -25,9 +25,11 @@ export class VirtualScrollSampleComponent implements AfterViewInit, OnDestroy {
   }
 
   private updateViewPortHtml() {
-    this.viewPortHtml = this.scrollViewPortElement.elementRef.nativeElement.outerHTML
-      .trim()
-      .replace(/<div/g, '\n\r<div');
+    if (this.scrollViewPortElement) {
+      this.viewPortHtml = this.scrollViewPortElement.elementRef.nativeElement.outerHTML
+        .trim()
+        .replace(/<div/g, '\n\r<div');
+    }
   }
 
   ngOnDestroy(): void {

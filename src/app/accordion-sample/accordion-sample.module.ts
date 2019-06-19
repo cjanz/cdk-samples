@@ -11,8 +11,7 @@ import { CdkAccordionModule } from '@angular/cdk/accordion';
   entryComponents: [AccordionSampleComponent],
   imports: [
     CommonModule,
-    AccordionSampleRoutingModule,
-    CdkAccordionModule
+    AccordionSampleRoutingModule
   ]
 })
 export class AccordionSampleModule { }

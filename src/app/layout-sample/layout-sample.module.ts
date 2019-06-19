@@ -10,8 +10,7 @@ import { LayoutSampleComponent } from './layout-sample.component';
   entryComponents: [LayoutSampleComponent],
   imports: [
     CommonModule,
-    LayoutSampleRoutingModule,
-    LayoutModule
+    LayoutSampleRoutingModule
   ]
 })
 export class LayoutSampleModule { }

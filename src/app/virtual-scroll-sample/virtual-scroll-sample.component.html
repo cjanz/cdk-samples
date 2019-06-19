@@ -1,8 +1,8 @@
-<cdk-virtual-scroll-viewport itemSize="50" class="example-viewport">
-  <div *cdkVirtualFor="let item of items; let odd = odd" [class.alternate]="odd" class="example-item">
+<div class="example-viewport">
+  <div *ngFor="let item of items; let odd = odd" [class.alternate]="odd" class="example-item">
     {{item}}
   </div>
-</cdk-virtual-scroll-viewport>
+</div>
 
 <pre class="html-output">
     <code>

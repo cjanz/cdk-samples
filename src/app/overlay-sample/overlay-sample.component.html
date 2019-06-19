@@ -2,17 +2,15 @@
 
 <form class="main" [formGroup]="form">
   <label for="address">Address</label>
-  <input type="text" id="address" formControlName="address" readonly placeholder="Address" cdkOverlayOrigin #trigger="cdkOverlayOrigin">
+  <input type="text" id="address" formControlName="address" readonly placeholder="Address" >
   <button type="button" (click)="isOpen = !isOpen">
     <i class="material-icons">expand_more</i>
   </button>
 
-  <ng-template cdkConnectedOverlay [cdkConnectedOverlayOrigin]="trigger" [cdkConnectedOverlayOpen]="isOpen"
-    (backdropClick)="close()" (detach)="close()" [cdkConnectedOverlayHasBackdrop]="true"
-    cdkConnectedOverlayBackdropClass="cdk-overlay-transparent-backdrop">
+  <div>
 
-    <div class="overlay" role="dialog" aria-label="Address Form">
-      <form cdkTrapFocusAutoCapture cdkTrapFocus (submit)="close()" [formGroup]="addressForm">
+    <div role="dialog" aria-label="Address Form">
+      <form (submit)="close()" [formGroup]="addressForm">
         <h1 class="title">Address</h1>
         <label for="street">Street</label>
         <input type="text" id="street" formControlName="street">
@@ -22,7 +20,7 @@
       </form>
     </div>
 
-  </ng-template>
+  </div>
 
 
   <div class="dummy">

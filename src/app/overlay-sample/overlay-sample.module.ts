@@ -13,9 +13,7 @@ import { A11yModule } from '@angular/cdk/a11y';
   imports: [
     CommonModule,
     OverlaySampleRoutingModule,
-    ReactiveFormsModule,
-    OverlayModule,
-    A11yModule
+    ReactiveFormsModule
   ]
 })
 export class OverlaySampleModule { }

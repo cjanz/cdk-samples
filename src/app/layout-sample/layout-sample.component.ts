@@ -13,13 +13,9 @@ export class LayoutSampleComponent implements OnInit {
 
   public portrait$: Observable<boolean>;
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
+  constructor() { }
 
   ngOnInit() {
-    this.portrait$ = this.breakpointObserver.observe('(orientation: portrait)')
-      .pipe(
-        map(result => result.matches)
-      );
   }
 
 }

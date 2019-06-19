@@ -21,7 +21,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
     ])
   ]
 })
-export class CardComponent extends CdkAccordionItem implements OnInit {
+export class CardComponent implements OnInit {
 
   @Input() title: string;
 

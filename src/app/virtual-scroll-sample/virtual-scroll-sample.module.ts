@@ -10,8 +10,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
   entryComponents: [VirtualScrollSampleComponent],
   imports: [
     CommonModule,
-    VirtualScrollSampleRoutingModule,
-    ScrollingModule
+    VirtualScrollSampleRoutingModule
   ]
 })
 export class VirtualScrollSampleModule { }

@@ -8,14 +8,14 @@ import { Platform, getSupportedInputTypes } from '@angular/cdk/platform';
 })
 export class PlatformSampleComponent implements OnInit {
 
-  constructor(public platform: Platform) { }
+  constructor() { }
 
   ngOnInit() {
 
   }
 
   public get hasDateInput() {
-    return getSupportedInputTypes().has('date');
+    return false;
   }
 
 }
