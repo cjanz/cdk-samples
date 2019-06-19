@@ -1,0 +1,9 @@
+<div class="header" (click)="toggle()">
+  <h1>{{title}}</h1>
+  <i class="material-icons" [@indicatorRotate]="expanded">keyboard_arrow_down</i>
+</div>
+<div class="content" [@bodyExpansion]="expanded">
+  <div class="content-body">
+    <ng-content></ng-content>
+  </div>
+</div>

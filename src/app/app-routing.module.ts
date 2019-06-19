@@ -37,6 +37,11 @@ export const routes: Routes = [
     path: 'virtualscroll',
     data: { label: 'Virtual Scrolling', icon: 'unfold_more' },
     loadChildren: () => import('./virtual-scroll-sample/virtual-scroll-sample.module').then(m => m.VirtualScrollSampleModule)
+  },
+  {
+    path: 'accordion',
+    data: { label: 'Accordion', icon: 'view_day' },
+    loadChildren: () => import('./accordion-sample/accordion-sample.module').then(m => m.AccordionSampleModule)
   }
 ];
 
